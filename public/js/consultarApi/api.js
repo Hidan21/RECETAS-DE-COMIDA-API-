@@ -23,7 +23,6 @@ export async function fetchAPI(valueInput = 'pollo') {
 export const generarHTML = (platillos) => {
   limpiarHTML();
   for (let prod of platillos) {
-    console.log(platillos);
     const { image, ingredientLines, label, calories, url } = prod.recipe;
     const calorias = parseFloat(calories).toFixed(2);
     contenedorPlatillos.innerHTML += `

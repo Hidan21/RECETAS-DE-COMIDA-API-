@@ -9,6 +9,7 @@ function activarMenu() {
   menulink.forEach((todosLosA, i) => {
     todosLosA.addEventListener('click', () => {
       menuList[i] = menuList.classList.remove('mostrar');
+      activarMenu();
     });
   });
 }
