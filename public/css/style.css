@@ -1,0 +1,590 @@
+/* GOOGLE FONT */
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Montserrat:wght@100;400;600;700;900&display=swap');
+
+/* CUSTOM PROPIETIES */
+:root {
+  --clr-blue-dark2: rgb(14, 19, 40);
+  --clr-blue-dark: rgb(18, 23, 48);
+  --clr-red-dark: rgb(193, 27, 27);
+  --clr-white: rgb(255, 255, 255);
+  --clr-black: rgb(46, 44, 45);
+  --clr-dark-gray: rgb(54, 54, 54);
+  --lcr-Gray: rgba(128, 128, 128);
+  --lcr-li-Gray: rgb(216, 208, 208);
+  --clr-yellow: rgb(255, 233, 40);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+}
+body {
+  background-color: #11162e;
+}
+
+.header {
+  width: 100%;
+  height: 100%;
+}
+/***********************  MENU DE MAVEGACION *****************/
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 35px;
+  width: 100%;
+  height: 60px;
+  position: fixed;
+  top: 0;
+  background: var(--clr-blue-dark);
+  z-index: 1000;
+  border: 1px solid var(--clr-dark-gray);
+}
+
+.logo {
+  font-family: 'Abril Fatface', cursive;
+  color: var(--clr-yellow);
+}
+.logo span {
+  font-family: 'Abril Fatface', cursive;
+  color: var(--clr-red-dark);
+}
+
+.menu-list a {
+  text-decoration: none;
+  color: var(--clr-white);
+  padding: 0.5rem;
+  font-weight: 400;
+  margin-left: 20px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.menu-list > a:hover {
+  color: var(--clr-red-dark);
+}
+
+.menu-right {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 50px;
+}
+
+.btn {
+  border: none;
+  cursor: pointer;
+  background: transparent;
+  padding: 0.5rem;
+  color: var(--clr-yellow);
+  font-size: 20px;
+}
+.btn:hover {
+  background: var(--clr-red-dark);
+  border-radius: 5px;
+}
+.btn-menu {
+  display: none;
+}
+
+.active {
+  background-color: var(--clr-red-dark);
+}
+.hiden {
+  display: none;
+}
+
+@media screen and (max-width: 800px) {
+  .btn-menu {
+    display: block;
+  }
+  .menu-list {
+    position: fixed;
+    left: 0;
+    top: 60px;
+    background: var(--clr-dark-gray);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 0 0 40px 20px;
+    width: 100%;
+    height: 100vh;
+    font-size: 1.5rem;
+    font-weight: 600;
+    transition: all 0.5s ease;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+  .menu-list > a {
+    color: var(--clr-white);
+    width: 100%;
+  }
+
+  .menu-list > a:hover {
+    background: rgb(63, 61, 61);
+  }
+
+  .menu-list.mostrar {
+    clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+  }
+  .logo {
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 340px) {
+  .logo {
+    font-size: 1.2em;
+  }
+}
+
+/* FIN DEL MENU DE NAVEGACION */
+
+/***********************  SWIPER JS *****************/
+.swiper__container {
+  height: 450px;
+  margin-top: 60px;
+  position: relative;
+}
+.descripcion__swiper {
+  position: absolute;
+  z-index: 2;
+  top: 20%;
+  left: 10%;
+  height: 350px;
+  padding: 5px;
+}
+.info__descripcion-swiper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.info__descripcion-swiper h3 {
+  margin-top: 20px;
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: var(--clr-white);
+}
+.info__descripcion-swiper p {
+  margin-top: 10px;
+  color: var(--clr-dark-gray);
+  font-weight: 600;
+}
+.info__descripcion-swiper .button__carrusel {
+  position: absolute;
+  left: 0;
+  margin-top: 10px;
+  height: 30px;
+  width: 170px;
+  padding: 5px;
+  text-decoration: none;
+  font-weight: 600;
+  background: var(--lcr-li-Gray);
+  border: 2px solid var(--clr-yellow);
+  border-radius: 10px 0px 10px 0px;
+  transition: all 0.3s;
+  color: var(--clr-dark-gray);
+  font-size: 1rem;
+  text-align: center;
+}
+.button__carrusel:hover {
+  transform: translate(0px, -2px);
+  border: 2px solid var(--clr-red-dark);
+  box-shadow: 0 3px 6px rgba(253, 7, 7, 0.16), 0 3px 6px rgba(248, 0, 0, 0.16);
+}
+
+.swiper-hero {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.swiper-hero img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.swiper-hero .capa {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #1c1c1d;
+  opacity: 0.5;
+  mix-blend-mode: overlay;
+}
+.info__descripcion-swiper h2 {
+  color: var(--clr-yellow);
+  text-transform: capitalize;
+  font-size: 2rem;
+}
+
+.swiper-hero .swiper-button-prev,
+.swiper-hero .swiper-button-next {
+  --swiper-navigation-size: 20px;
+  background-color: rgba(255, 255, 255, 0.486);
+  height: 60px;
+  width: 30px;
+  margin-top: -30px;
+  opacity: 0;
+  transition: opacity 0.35s;
+}
+
+.swiper-hero:hover .swiper-button-prev,
+.swiper-hero:hover .swiper-button-next {
+  opacity: 1;
+}
+.swiper-hero .swiper-button-prev {
+  border-radius: 0 60px 60px 0;
+  margin-left: -10px;
+}
+.swiper-hero .swiper-button-next {
+  border-radius: 60px 0 0 60px;
+  margin-right: -10px;
+}
+
+@media (max-width: 700px) {
+  .swiper__container {
+    height: 450px;
+    margin-top: 60px;
+    position: relative;
+  }
+  .swiper-hero {
+    width: 100%;
+    height: 400px;
+  }
+  .info__descripcion-swiper h2 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .descripcion__swiper {
+    top: 5%;
+    left: 10%;
+  }
+  .swiper__container {
+    height: 350px;
+  }
+  .info__descripcion-swiper h2 {
+    font-size: 1.2rem;
+  }
+  .swiper-hero {
+    height: 300px;
+  }
+}
+.swiper-hero .swiper-pagination {
+  --swiper-pagination-color: white;
+  --swiper-pagination-bullet-size: 8px;
+  --swiper-pagination-bullet-inactive-color: rgb(244, 247, 253);
+  --swiper-pagination-bullet-inactive-opacity: 0.25;
+  --swiper-pagination-bullet-opacity: 1;
+  --swiper-pagination-bullet-horizontal-gap: 2px;
+}
+.swiper-hero .swiper-pagination-bullet {
+  box-shadow: inset 0 0 0 1px #fff;
+}
+
+.swiper-hero .swiper-pagination-bullet-active {
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.25);
+}
+/* FIN CARRUSEL SWIPER*/
+
+/* =============================== RECETAS ======================================= */
+.seccion-recetas {
+  background-color: var(--clr-blue-dark2);
+  margin-top: 0px;
+  padding: 40px;
+}
+.seccion-recetas img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+.container-recetas {
+  position: relative;
+}
+.container-recetas h1 {
+  color: var(--lcr-li-Gray);
+  font-size: 2rem;
+  text-transform: capitalize;
+  text-align: center;
+}
+.formulario-receta {
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+}
+.formulario-receta input {
+  width: 100%;
+  max-width: 500px;
+  background-color: transparent;
+  border: 1px solid var(--lcr-li-Gray);
+  outline: none;
+  color: var(--lcr-li-Gray);
+  font-size: 1.2rem;
+  padding: 5px;
+  border-radius: 10px;
+}
+.container-recet-card {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+.container-recet-card .card {
+  width: 250px;
+  border: 2px solid var(--clr-dark-gray);
+  border-radius: 20px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  transition: transform 0.3s;
+}
+
+.container-recetas .card:hover {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.16);
+  transform: translate(0px, -3px);
+}
+.receta-img {
+  padding: 5px;
+}
+
+.container-recet-card .receta-detail {
+  background-color: var(--clr-blue-dark);
+  margin-top: 30px;
+  padding: 10px;
+  border-radius: 0px 60px 20px 20px;
+  position: relative;
+}
+
+.receta-detail h2 {
+  color: var(--lcr-li-Gray);
+}
+.receta-detail p {
+  display: none;
+}
+.buttons__card-receta {
+  margin: 20px 0;
+  display: flex;
+  justify-content: space-between;
+}
+.calorias-info {
+  color: var(--lcr-li-Gray);
+  font-weight: 600;
+}
+.ver-recet {
+  padding: 5px 10px;
+  background: var(--clr-red-dark);
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  color: var(--lcr-li-Gray);
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.5s;
+}
+.ver-recet:hover {
+  color: var(--clr-red-dark);
+  background: var(--clr-yellow);
+}
+
+.info__platillos-div {
+  position: fixed;
+  z-index: 1000;
+  background-color: var(--clr-red-dark);
+  height: 400px;
+  overflow: auto;
+  max-height: 100%;
+  top: 9%;
+  left: 20%;
+  right: 20%;
+  padding: 20px;
+  display: none;
+}
+
+.info__platillos-div a {
+  color: var(--clr-yellow);
+  padding: 10px;
+  margin: 20px;
+  font-weight: 600;
+  border: 1px solid var(--clr-yellow);
+}
+.info__platillos-div p {
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 20px;
+}
+
+.info__platillos-div::-webkit-scrollbar {
+  display: none;
+}
+.titulo-info {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  color: var(--lcr-li-Gray);
+}
+.titulo-info h3 {
+  cursor: pointer;
+  font-size: 1.3rem;
+}
+.titulo-info h3:hover {
+  color: var(--clr-red-dark);
+  background-color: var(--clr-yellow);
+  border-radius: 50px;
+}
+/* FIN DE SEECIONN RECETAS */
+
+/* ***********************SOBRE NOSOTROS*********************** */
+.sobre_nosotros {
+  margin-top: 40px;
+  margin-bottom: 20px;
+  padding: 20px;
+}
+.sobre_nosotros .header__acerca {
+  background-image: url(/assets/img/header.png);
+  height: 200px;
+  padding: 40px;
+  font-size: 1.3rem;
+  text-transform: capitalize;
+}
+.sobre_nosotros .titulo__nosotros {
+  text-align: center;
+  margin-bottom: 20px;
+  color: var(--clr-red-dark);
+  font-size: 1.8rem;
+  font-weight: 900;
+  text-transform: capitalize;
+}
+.header__acerca h2 {
+  color: var(--clr-yellow);
+}
+.header__acerca p {
+  margin-left: 50px;
+}
+
+.informacion_nosotros {
+  padding: 40px;
+  text-align: center;
+  color: var(--lcr-Gray);
+  font-size: 1.2rem;
+}
+@media (max-width: 400px) {
+  .header__acerca h2 {
+    font-weight: 1rem;
+  }
+  .header__acerca p {
+    display: none;
+  }
+}
+/* =========================== FOOTER============================== */
+.footer {
+  color: var(--clr-white);
+  width: 100%;
+  padding: 40px;
+  margin-top: 10px;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.footer__tirulo-paagina {
+  padding-bottom: 30px;
+  border-bottom: 1px solid rgb(204, 199, 199);
+  width: 70%;
+  margin: auto;
+  margin-bottom: 20px;
+  font-size: 1.5em;
+  text-transform: capitalize;
+  text-align: center;
+}
+
+.footer__flex {
+  display: flex;
+}
+.seccion h2 {
+  color: rgb(241, 234, 234);
+}
+.social__media-icon {
+  margin: 70px 30px 0px 50px;
+  width: 300px;
+  text-align: center;
+}
+
+.social__media-icon {
+  margin: 70px 30px 0px 50px;
+  width: 300px;
+  text-align: center;
+}
+.social__media-icon h2 {
+  padding: 15px;
+}
+.social__media-icon a {
+  font-size: 2em;
+  margin: 10px;
+  cursor: pointer;
+  padding: 5px;
+  text-decoration: none;
+  border-radius: 10px;
+  background-color: rgb(26, 24, 24);
+  color: rgb(132, 132, 146);
+}
+.social__media-icon i.fa-square-facebook:hover {
+  color: #1877f2;
+}
+.social__media-icon i.fa-square-twitter:hover {
+  color: #1da1f2;
+}
+.social__media-icon i.fa-square-instagram:hover {
+  color: #c32aa3;
+}
+.social__media-icon i.fa-telegram:hover {
+  color: #0088cc;
+}
+
+@media (max-width: 750px) {
+  .footer__flex {
+    flex-direction: column;
+    width: 80%;
+    padding: 10px;
+    align-items: center;
+    margin: auto;
+    text-align: center;
+  }
+
+  .social__media-icon {
+    margin: 5px;
+    width: 300px;
+    text-align: center;
+    font-size: 1em;
+    line-height: 50px;
+  }
+  .footer__seccion-1 {
+    order: 2;
+    margin-bottom: 30px;
+  }
+  .footer__seccion-2 {
+    order: 3;
+  }
+
+  .footer__seccion-3 {
+    order: 2;
+  }
+}
+@media (max-width: 340px) {
+  .social__media-icon {
+    margin: 20px;
+    width: 200px;
+    text-align: center;
+  }
+
+  .footer__tirulo-paagina {
+    font-size: 1.2em;
+  }
+  .seccion h2 {
+    font-size: 20px;
+    color: rgb(241, 234, 234);
+  }
+}
+/* FIN FOOTER */

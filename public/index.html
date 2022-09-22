@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- STYLES CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- SWIPER JS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+  <!-- FONT-AWESOME -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Document</title>
+</head>
+
+<body>
+  <header class="header" id="header">
+
+    <!-- ============================== MENU DE NAVEGACION =================================-->
+    <nav class="header__nav">
+      <h2 class="logo"> TUS <span>RECETAS</span> </h2>
+      <div class="menu-list">
+        <a href="#header">inicio</a>
+        <a href="#nosotros">sobre nosotros</a>
+        <a href="#receta">recetas</a>
+        <a href="#footer">footer</a>
+      </div>
+      <div class="menu-right">
+        <div class="search">
+          <button class="btn btn-menu">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </div>
+    </nav>
+    <!-- FIN DEL MENU DE NAVEGACION -->
+
+
+    <!-- ===============================SWIPER JS =================== -->
+    <div class="swiper__container">
+      <div class="descripcion__swiper">
+        <div class="info__descripcion-swiper">
+          <h2> <i> comida a la que no te puedes resistir</i> </h2>
+          <h3> <i>hola soy larry que haces</i></h3>
+          <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, fugit!</p>
+
+          <a href="#receta" class="button__carrusel">Ir A Las Recetas</a>
+        </div>
+      </div>
+      <div class="swiper swiper-hero">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide">
+            <img src="assets/img/pizza.jpg" alt="">
+            <div class="capa"></div>
+          </div>
+          <div class="swiper-slide">
+            <img src="assets/img/pancakes.jpg" alt="">
+            <div class="capa"></div>
+          </div>
+          <div class="swiper-slide">
+            <img src="assets/img/asparagus-g897c7e84b_1920.jpg" alt="">
+            <div class="capa"></div>
+          </div>
+          <div class="swiper-slide">
+            <img src="assets/img/cake-g691595986_1920.jpg" alt="">
+            <div class="capa"></div>
+          </div>
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+
+        <!-- If we need scrollbar -->
+        <div class="swiper-scrollbar"></div>
+      </div>
+
+    </div>
+    <!-- Slider main container -->
+  </header>
+
+  <!--============= SECCION SOBRE NOSOTROS  ==================-->
+  <div class="sobre_nosotros">
+    <h2 class="titulo__nosotros" id="nosotros">sobre nosotros</h2>
+    <div class="header__acerca">
+      <h2>búsqueda de recetas</h2>
+      <p>Busca más de 2,3 millones de recetas en inglés</p>
+    </div>
+
+    <div class="informacion_nosotros">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia possimus sequi eum esse commodi earum fugit ipsa
+      atque, vitae aspernatur placeat dolorum sunt quod voluptas! Minus, odit nam! Facere, dignissimos!
+    </div>
+  </div>
+
+  <!-- FIN SECCION NOSOTROS -->
+
+
+  <!-- =================================== CONTENEDOR DE RECETAS ========================================== -->
+
+  <section class="seccion-recetas">
+    <div class="container-recetas" id="receta">
+      <h1> buscar recetas</h1>
+      <form action="" class="formulario-receta">
+        <input type="text" placeholder="buscar receta" name="receta">
+      </form>
+
+      <div class="info__platillos-div">
+        <div class="titulo-info">
+          <h2>tituylo de la receta</h2>
+          <h3 class="cerrerV">x</h3>
+        </div>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste quidem tenetur tempore, odit beatae veniam
+          distinctio dolore itaque ea? Harum maxime odit illum fugiat perspiciatis doloremque, nulla ipsam iste
+          impedit?
+        </p>
+
+        <a href="">ir a la receta</a>
+      </div>
+      <div class="container-recet-card">
+        <!--         <div class="card" id="receta">
+          <div class="receta__card">
+            <div class="receta-img">
+              <img src="/assets/img/asparagus-g897c7e84b_1920.jpg" alt="">
+            </div>
+            <div class="receta-detail">
+              <h2>nombre de la receta </h2>
+              <div class="parrafo-detail">
+                <div class="info__receta-div">
+
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci neque optio amet aspernatur nobis
+                    illum
+                    necessitatibus ut praesentium molestiae similique?
+                  </p>
+                </div>
+
+              </div>
+              <div class="buttons__card-receta">
+                <div class="calorias-info">calorias: 3000</div>
+                <button class="cart-btn ver-recet">ver receta</button>
+              </div>
+            </div>
+
+          </div>
+        </div> -->
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ============================= FOOTER ================================-->
+  <footer class="footer">
+    <div class="footer__container" id="footer">
+      <div class="footer__tirulo-paagina">
+        <h2 class="logo"> TUS <span>RECETAS</span> </h2>
+      </div>
+      <div class="footer__flex">
+
+        <section class="seccion-f footer__seccion-1">
+          <h2>QUE OFRECEMOS</h2>
+          <P>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat soluta at hic accusantium a, quisquam
+            illo fuga? Nemo, beatae perferendis.</P>
+        </section>
+
+        <section class="seccion-f footer__seccion-2">
+          <div class="social__media">
+            <div class="social__media-icon">
+              <h2>SÍGANOS EN </h2>
+              <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+              <a href="#"><i class="fa-brands fa-square-twitter"></i></a>
+              <a href="#"><i class="fa-brands fa-telegram"></i></a>
+              <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+            </div>
+          </div>
+        </section>
+
+        <section class="seccion-f footer__seccion-3">
+          <div class="sobre__nosotros">
+            <h2>SOBRE NOSOTROS</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur consequuntur itaque ad, velit earum
+              consequatur adipisci illo voluptatibus officiis dicta.</p>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </footer>
+  <!-- FIN DEL FOOTER -->
+
+
+  <!-- SCRIPT JS -->
+  <script src="js/main.js" type="module"></script>
+  <!-- SWIPER JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+</body>
+
+</html>
